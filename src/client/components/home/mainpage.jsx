@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const HeaderPlan = () => {
-  //effecto para visualizar los paneles
-  const [effect, setEffect] = useState(false);
-  const [loading, setLoading] = React.useState(false);
-
-  useEffect(() => {}, []);
-  return <div>Hola web</div>;
+  return <div className="container bg-dark">Hola web</div>;
 };
 
 export default HeaderPlan;
