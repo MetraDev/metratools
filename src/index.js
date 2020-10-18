@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import App from './client/components/AppRouter';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./client/components/AppRouter";
+import Particles from "./client/components/particles/ParticlesCustom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <App />
+      <Particles />
+    </div>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
