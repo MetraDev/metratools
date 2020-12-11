@@ -3,13 +3,11 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./client/components/AppRouter";
-import Particles from "./client/components/particles/ParticlesCustom";
 
 ReactDOM.render(
   <React.StrictMode>
     <div>
       <App />
-      <Particles />
     </div>
   </React.StrictMode>,
   document.getElementById("root")
