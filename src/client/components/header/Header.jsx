@@ -1,41 +1,21 @@
 import React, { useState } from "react";
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-} from "reactstrap";
+import Grid from '@material-ui/core/Grid';
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false);
-  const openCloseDropdown = (path) => {
-    setDropdown(!dropdown);
-  };
   return (
-    <nav className="navbar navbar-inverse bg-dark">
+    
+    <Grid style={{'background':'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'}} className="navbar navbar-inverse bg-dark">
       <div className="container-fluid">
         <div className="col">
-          <h2 className="text-light">Sergio Perez</h2>
+          <h2 className="text-light">Sergio Pérez</h2>
         </div>
         <div className="col-left mr-4">
-          <button className="btn bg-dark text-light mr-2 font-weight-bold">Home</button>
-          <button className='btn bg-dark text-light mr-2 font-weight-bold'>CV</button>
-          <button className='btn bg-dark text-light mr-2 font-weight-bold'>Blog</button>
-        </div>
-        <div className="col-left">
-          <Dropdown isOpen={dropdown} toggle={openCloseDropdown} size="lg">
-            <DropdownToggle caret className="bg-dark">
-              MetraTools
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem>Tool One</DropdownItem>
-              <DropdownItem>Tool Two</DropdownItem>
-              <DropdownItem>Tool three</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          <button className="btn  text-light mr-2 font-weight-bold">Home</button>
+          <button className='btn  text-light mr-2 font-weight-bold'>CV</button>
+          <button className='btn  text-light mr-2 font-weight-bold'>Blog</button>
         </div>
       </div>
-    </nav>
+    </Grid>
   );
 };
 
