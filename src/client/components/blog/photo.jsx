@@ -1,13 +1,11 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import PresentationCard from './presentation/PresentationCard'
-const Home = () => {
+import PresentationCard from "./presentation/card";
+import Carousel from "./carousel/Carousel";
+const ShowPhoto = ({carousel}) => {
   return (
-    <Grid container spacing={1}>
       <Grid
-        align="right"
-        xs={2}
-        style={{ "margin-top": "12px"}}
+        style={{ "margin-top": "12px" }}
         className="container zindex-fixed"
       >
         <img
@@ -15,12 +13,9 @@ const Home = () => {
           class="img-thumbnail"
           alt="Responsive image"
         />
+        {carousel && carousel}
       </Grid>
-      <Grid xs={10} style={{ "margin-top": "13px" }}>
-        <PresentationCard />
-      </Grid>
-    </Grid>
   );
 };
 
-export default Home;
+export default ShowPhoto;

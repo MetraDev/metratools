@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./home/mainpage";
+import Blog from "../pages/Blog";
 import NotFound from "./notFound/NotFound";
 import Nav from "./header/Header";
 
@@ -8,9 +8,8 @@ import Nav from "./header/Header";
 const Routes = () => {
   return (
     <Router>
-      <Nav />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Blog} />
         <Route path="*" component={NotFound} />
       </Switch>
     </Router>
